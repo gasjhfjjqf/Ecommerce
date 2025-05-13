@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.ecommerce.mapper.ProductMapper">
+    <select id="findAll" resultType="com.example.ecommerce.entity.Product">
+        SELECT * FROM product
+    </select>
+
+    <select id="findById" resultType="com.example.ecommerce.entity.Product">
+        SELECT * FROM product WHERE id = #{id}
+    </select>
+
+    <insert id="insert" parameterType="com.example.ecommerce.entity.Product">
+        INSERT INTO product (name, description, price, stock)
+        VALUES (#{name}, #{description}, #{price}, #{stock})
+    </insert>
+
+    <update id="update" parameterType="com.example.ecommerce.entity.Product">
+        UPDATE product
+        SET name=#{name}, description=#{description}, price=#{price}, stock=#{stock}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteById" parameterType="long">
+        DELETE FROM product WHERE id = #{id}
+    </delete>
+</mapper>

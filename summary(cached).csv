@@ -1,0 +1,3 @@
+Label,# Samples,Average,Min,Max,Std. Dev.,Error %,Throughput,Received KB/sec,Sent KB/sec,Avg. Bytes
+GET Product by ID,5000,18,2,429,36.45,100.000%,593.82423,4550.53,73.07,7847.0
+TOTAL,5000,18,2,429,36.45,100.000%,593.82423,4550.53,73.07,7847.0

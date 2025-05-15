@@ -19,6 +19,7 @@ public class ProductService {
     public List<Product> listAll() {
         return mapper.findAll();
     }
+
     @Cacheable(value = "product", key = "#id")
     public Product getById(Long id) {
         return mapper.findById(id);
@@ -26,7 +27,7 @@ public class ProductService {
 
     @CacheEvict(value = "product", key = "#product.id", condition = "#product.id != null")
     public Product save(Product product) {
-        if(product.getId() == null) {
+        if (product.getId() == null) {
             mapper.insert(product);
         } else {
             mapper.update(product);

@@ -6,6 +6,7 @@ import com.example.ecommerce.service.RedisService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Random;
 
 @RestController
 @RequestMapping("/products")

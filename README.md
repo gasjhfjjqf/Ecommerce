@@ -1,1 +1,1 @@
-# This is a practice of me.
+# This is my concurrent e-commerce system project
